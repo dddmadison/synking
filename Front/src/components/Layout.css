@@ -1,0 +1,122 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ✅ Bulma 전역 오염 방지: Layout 내부로 스코프 */
+.layout .navbar {
+  flex-shrink: 0;
+}
+
+/* ✅ 하단 영역이 길어져도 main이 스크롤될 수 있게 min-height:0 */
+.layout .columns {
+  flex-grow: 1;
+  display: flex;
+  min-height: 0;
+  /* overflow: hidden;  ❌ main 스크롤을 막아 UI가 잘리는 원인이 되기 쉬움 */
+}
+
+/* ✅ 메인 컨텐츠 스크롤 허용 */
+.layout main.column {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* 사이드바: 연한 민트 + 경계선 */
+.layout .menu.sidebar {
+  background-color: #e6f6f8; /* 기존 진한 색 → 연한 톤 */
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #d6eef2;
+}
+
+.layout .menu.sidebar .title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.layout .menu.sidebar .field {
+  margin-bottom: 0.75rem;
+}
+
+/* 체크리스트 박스: 카드 느낌만 살짝 */
+.layout .checklist-box {
+  height: 35%;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  padding: 12px;
+}
+
+/* 입력 포커스 링(접근성) - Layout 내부에만 */
+.layout .input:focus {
+  outline: none;
+  border-color: #2578d6;
+  box-shadow: 0 0 0 3px rgba(33, 78, 131, 0.35);
+}
+
+/* 네비 hover 부드럽게 - Layout 내부에만 */
+.layout .navbar a.navbar-item:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+/* 팀 멤버 타이틀: 가독성 */
+.layout .team-member-list .title {
+  color: #111;
+}
+
+/* 채팅 패널(주석 상태 유지) - Layout 내부에만 */
+.layout .chat-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  border-left: 1px solid #ccc;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.layout .chat-window.open {
+  transform: translateX(0);
+}
+
+.layout .chat-window-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.layout .chat-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.layout .close-chat-button {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.layout .chat-window-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}

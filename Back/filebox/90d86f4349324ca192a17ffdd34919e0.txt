@@ -1,0 +1,159 @@
+delifaybook/
+├─ .idea/
+├─ ai_server/
+│  ├─ .venv/
+│  ├─ __pycache__/
+│  ├─ best.pt
+│  ├─ main.py
+│  └─ requirements.txt
+├─ client/
+│  └─ src/
+│     ├─ api/
+│     │  ├─ auth.api.js
+│     │  ├─ books.api.js
+│     │  ├─ bookshelf.api.js
+│     │  ├─ client.js
+│     │  └─ runtime.js
+│     ├─ components/
+│     │  ├─ common/
+│     │  │  ├─ BookCard.jsx
+│     │  │  ├─ EmptyState.jsx
+│     │  │  └─ TopNav.jsx
+│     │  └─ ManualRegisterForm.jsx
+│     ├─ context/
+│     │  ├─ AuthContext.jsx
+│     │  └─ BooksContext.jsx
+│     ├─ layouts/
+│     │  └─ AppLayout.jsx
+│     ├─ mock/
+│     │  ├─ mockBooks.js
+│     │  └─ mockBookshelf.js
+│     ├─ pages/
+│     │  ├─ BookDetailPage.jsx
+│     │  ├─ BookshelfPage.jsx
+│     │  ├─ HomePage.jsx
+│     │  ├─ LoginPage.jsx
+│     │  ├─ SearchPage.jsx
+│     │  └─ SignupPage.jsx
+│     ├─ routes/
+│     │  └─ RequireAuth.jsx
+│     ├─ styles/
+│     │  ├─ appLayout.css
+│     │  ├─ auth.css
+│     │  ├─ bookDetail.css
+│     │  ├─ bookshelf.css
+│     │  ├─ home.css
+│     │  ├─ nav.css
+│     │  └─ search.css
+│     ├─ App.css
+│     ├─ App.js
+│     ├─ App.test.js
+│     ├─ index.css
+│     ├─ index.js
+│     └─ logo.svg
+├─ server/
+│  └─ server/
+│     └─ src/
+│        ├─ main/
+│        │  ├─ java/
+│        │  │  └─ com/
+│        │  │     └─ delifaybook/
+│        │  │        └─ server/
+│        │  │           ├─ ServerApplication.java
+│        │  │           ├─ api/
+│        │  │           │  ├─ auth/
+│        │  │           │  │  ├─ AuthController.java
+│        │  │           │  │  └─ dto/
+│        │  │           │  │     ├─ LoginRequest.java
+│        │  │           │  │     └─ SignupRequest.java
+│        │  │           │  ├─ books/
+│        │  │           │  │  ├─ BooksController.java
+│        │  │           │  │  └─ dto/
+│        │  │           │  │     ├─ BookLookupResponse.java
+│        │  │           │  │     ├─ BookSearchItemResponse.java
+│        │  │           │  │     └─ BookSearchResponse.java
+│        │  │           │  ├─ bookshelf/
+│        │  │           │  │  ├─ BookshelfController.java
+│        │  │           │  │  └─ dto/
+│        │  │           │  │     ├─ AddToBookshelfRequest.java
+│        │  │           │  │     └─ UpdateProgressRequest.java
+│        │  │           │  ├─ health/
+│        │  │           │  │  └─ HealthController.java
+│        │  │           │  ├─ me/
+│        │  │           │  │  ├─ MeController.java
+│        │  │           │  │  └─ dto/
+│        │  │           │  │     └─ MeResponse.java
+│        │  │           │  └─ notes/
+│        │  │           │     ├─ NotesController.java
+│        │  │           │     └─ dto/
+│        │  │           │        ├─ NoteCreateRequest.java
+│        │  │           │        └─ NoteResponse.java
+│        │  │           ├─ domain/
+│        │  │           │  ├─ book/
+│        │  │           │  │  ├─ AiCoverService.java
+│        │  │           │  │  ├─ Book.java
+│        │  │           │  │  ├─ BookRepository.java
+│        │  │           │  │  └─ BookService.java
+│        │  │           │  ├─ bookshelf/
+│        │  │           │  │  ├─ Bookshelf.java
+│        │  │           │  │  ├─ BookshelfRepository.java
+│        │  │           │  │  ├─ BookshelfService.java
+│        │  │           │  │  └─ BookshelfStatus.java
+│        │  │           │  ├─ notes/
+│        │  │           │  │  ├─ Note.java
+│        │  │           │  │  ├─ NoteRepository.java
+│        │  │           │  │  └─ NoteService.java
+│        │  │           │  ├─ progress/
+│        │  │           │  │  ├─ Progress.java
+│        │  │           │  │  ├─ ProgressRepository.java
+│        │  │           │  │  └─ ProgressService.java
+│        │  │           │  └─ user/
+│        │  │           │     ├─ UserEntity.java
+│        │  │           │     └─ UserRepository.java
+│        │  │           └─ global/
+│        │  │              ├─ auth/
+│        │  │              │  ├─ CurrentUserProvider.java
+│        │  │              │  ├─ DevCurrentUserProvider.java
+│        │  │              │  └─ ProdCurrentUserProvider.java
+│        │  │              ├─ config/
+│        │  │              │  ├─ CorsConfig.java
+│        │  │              │  ├─ HttpClientConfig.java
+│        │  │              │  ├─ JacksonConfig.java
+│        │  │              │  ├─ NlkApiProperties.java
+│        │  │              │  └─ WebMvcConfig.java
+│        │  │              ├─ error/
+│        │  │              │  ├─ ApiError.java
+│        │  │              │  ├─ ApiException.java
+│        │  │              │  ├─ ErrorCode.java
+│        │  │              │  └─ GlobalExceptionHandler.java
+│        │  │              ├─ external/
+│        │  │              │  └─ nlk/
+│        │  │              │     ├─ NlkApi.java
+│        │  │              │     ├─ NlkClient.java
+│        │  │              │     ├─ dto/
+│        │  │              │     │  ├─ NlkBookDoc.java
+│        │  │              │     │  ├─ NlkBookItem.java
+│        │  │              │     │  └─ NlkLookupResponse.java
+│        │  │              │     └─ exception/
+│        │  │              │        └─ NlkException.java
+│        │  │              ├─ logging/
+│        │  │              │  └─ RequestLoggingFilter.java
+│        │  │              ├─ response/
+│        │  │              │  └─ ApiResponse.java
+│        │  │              ├─ security/
+│        │  │              │  ├─ DbUserDetails.java
+│        │  │              │  ├─ DbUserDetailsService.java
+│        │  │              │  ├─ SecurityAccessDeniedHandler.java
+│        │  │              │  ├─ SecurityAuthEntryPoint.java
+│        │  │              │  └─ SecurityConfig.java
+│        │  │              └─ util/
+│        │  │                 └─ IsbnNormalizer.java
+│        │  └─ resources/
+│        │     ├─ static/
+│        │     ├─ templates/
+│        │     ├─ application.yml
+│        │     └─ application-dev.yml
+│        └─ test/
+│           └─ java/
+├─ 책 표지 데이터/
+└─ .gitignore

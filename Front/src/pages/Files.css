@@ -1,0 +1,43 @@
+/* src/pages/Files.css */
+
+/* ✅ 전역 .container / .button / .input / .label / .table 덮어쓰기 금지
+   → 페이지 스코프(.filesPage) 안에서만 적용 */
+.filesPage {
+  padding: 20px;
+}
+
+/* Files 화면에서만 컨테이너 폭/정렬을 맞추고 싶을 때 */
+.filesPage .container {
+  padding: 20px;
+  margin: 20px auto 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* 테이블 정렬/가독성 */
+.filesPage .table th,
+.filesPage .table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+/* 폼 요소 글자 크기(필요 시) */
+.filesPage .label {
+  font-size: 16px;
+}
+
+.filesPage .input {
+  font-size: 16px;
+}
+
+.filesPage .button {
+  font-size: 16px;
+}
+
+/* 다운로드 아이콘(페이지 내부에서만) */
+.filesPage .download-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

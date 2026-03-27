@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+PyMySQL
+PyJWT
+cryptography
+# --- RAG 개발을 위한 라이브러리 추가 ---
+langchain
+langchain-community
+langchain-openai
+openai
+faiss-cpu
+pypdf
+tiktoken

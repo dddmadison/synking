@@ -1,0 +1,15 @@
+/* src/components/TeamMembers.css */
+.team-member-list .title {
+  color: rgb(0, 0, 0); /* Change this to the color you want for the title */
+}
+
+.team-member-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.team-member-list .team-member {
+  color: black; /* Set the text color to black */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 5px; /* Space between list items */
+}

@@ -1,0 +1,99 @@
+/* src/pages/Calendar.css */
+.calendarPage .calendar-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.calendarPage .calendar-header {
+  display: flex;
+  justify-content: center;   /* 가운데 정렬 */
+  align-items: center;
+  gap: 14px;                 /* 화살표와 월/연 간격을 좁힘 */
+  margin-bottom: 12px;
+}
+
+.calendarPage .calendar-header button {
+  background: none;
+  border: none;
+  font-size: 26px;           /* 기존 24px → 약 10% 확대 */
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.calendarPage .month-year {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.calendarPage .month {
+  font-size: 53px;           /* 기존 48px → 약 10% 확대 */
+  font-weight: bold;
+  color: red;
+}
+
+.calendarPage .year {
+  font-size: 26px;           /* 기존 24px → 약 10% 확대 */
+}
+
+/* Grid */
+.calendarPage .grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.calendarPage .cell {
+  min-height: 92px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.calendarPage .weekday {
+  background: #f5f5f5;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Today/weekend */
+.calendarPage .today {
+  outline: 2px solid #222;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+
+.calendarPage .sun { color: #d00; }
+.calendarPage .sat { color: #06c; }
+.calendarPage .cell-sun { background: #fff6f6; }
+.calendarPage .cell-sat { background: #f6f9ff; }
+
+.calendarPage .date {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Task badges */
+.calendarPage .task-label {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.calendarPage .start { background: #e8f5e9; }
+.calendarPage .due { background: #ffebee; }
+.calendarPage .span { background: #eef2ff; }
+
+.calendarPage .task-more {
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.8;
+}
